@@ -17,6 +17,13 @@ find_package(Qt5 COMPONENTS Multimedia REQUIRED)
 
 add_subdirectory(src)
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/asteroid-camera.in
+	${CMAKE_BINARY_DIR}/asteroid-camera
+	@ONLY)
+
+install(PROGRAMS ${CMAKE_BINARY_DIR}/asteroid-camera
+	DESTINATION ${CMAKE_INSTALL_BINDIR})
+
 generate_desktop(${CMAKE_SOURCE_DIR} asteroid-camera)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
