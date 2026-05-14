@@ -6,16 +6,16 @@ project(
 	DESCRIPTION "Default camera app for AsteroidOS"
 )
 
-find_package(AsteroidApp REQUIRED)
+find_package(AsteroidApp6 REQUIRED)
 
 set(CMAKE_MODULE_PATH ${ASTEROID_MODULE_PATH})
 
 include(FeatureSummary)
 include(GNUInstallDirs)
-include(AsteroidCMakeSettings)
-include(AsteroidTranslations)
+include(Asteroid6CMakeSettings)
+include(Asteroid6Translations)
 
-find_package(Qt5 COMPONENTS Multimedia REQUIRED)
+find_package(Qt6 COMPONENTS Multimedia REQUIRED)
 
 add_subdirectory(src)
 

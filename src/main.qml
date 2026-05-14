@@ -15,9 +15,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.9
-import QtMultimedia 5.11
-import org.asteroid.controls 1.0
+import QtQuick
+import QtMultimedia
+import org.asteroid.controls
 
 Application {
     id: app
@@ -25,12 +25,14 @@ Application {
     centerColor: "black"
     outerColor: "black"
 
-    Camera {
-        id: camera
+    CaptureSession {
+        videoOutput: output
+
+        camera: Camera {}
     }
 
     VideoOutput {
-        source: camera
+        id: output
         anchors.fill: parent
     }
 }
