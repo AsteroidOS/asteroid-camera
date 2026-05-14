@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.6.0)
 
-project(asteroid-camera
+project(
+	asteroid-camera
 	VERSION 2.1.0
-	DESCRIPTION "Default camera app for AsteroidOS")
+	DESCRIPTION "Default camera app for AsteroidOS"
+)
 
 find_package(AsteroidApp REQUIRED)
 
@@ -17,12 +19,16 @@ find_package(Qt5 COMPONENTS Multimedia REQUIRED)
 
 add_subdirectory(src)
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/asteroid-camera.in
+configure_file(
+	${CMAKE_CURRENT_SOURCE_DIR}/asteroid-camera.in
 	${CMAKE_BINARY_DIR}/asteroid-camera
-	@ONLY)
+	@ONLY
+)
 
-install(PROGRAMS ${CMAKE_BINARY_DIR}/asteroid-camera
-	DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(
+	PROGRAMS ${CMAKE_BINARY_DIR}/asteroid-camera
+	DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
 
 generate_desktop(${CMAKE_SOURCE_DIR} asteroid-camera)
 
