@@ -4,7 +4,7 @@ set_target_properties(asteroid-camera PROPERTIES PREFIX "")
 target_link_libraries(
 	asteroid-camera
 	PUBLIC
-		Asteroid::AsteroidApp
+		Asteroid::AsteroidApp6
 )
 
 install(
